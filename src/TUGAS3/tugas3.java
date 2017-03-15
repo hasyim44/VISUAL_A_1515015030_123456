@@ -42,6 +42,7 @@ public class tugas3 extends javax.swing.JFrame {
         jKanan = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -102,9 +103,10 @@ public class tugas3 extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Menu Utama");
         setPreferredSize(new java.awt.Dimension(910, 790));
+        setResizable(false);
 
         jAtas.setBackground(new java.awt.Color(204, 0, 0));
         jAtas.setMaximumSize(new java.awt.Dimension(32768, 32768));
@@ -225,23 +227,30 @@ public class tugas3 extends javax.swing.JFrame {
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel24.setText("SELAMAT DATANG ");
 
+        jSeparator2.setBackground(new java.awt.Color(0, 0, 255));
+
         javax.swing.GroupLayout jKananLayout = new javax.swing.GroupLayout(jKanan);
         jKanan.setLayout(jKananLayout);
         jKananLayout.setHorizontalGroup(
             jKananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jKananLayout.createSequentialGroup()
-                .addGap(195, 195, 195)
-                .addComponent(jLabel8)
-                .addContainerGap(344, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jKananLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel24)
-                .addGap(355, 355, 355))
+                .addContainerGap(158, Short.MAX_VALUE)
+                .addGroup(jKananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jKananLayout.createSequentialGroup()
+                        .addComponent(jLabel24)
+                        .addGap(355, 355, 355))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jKananLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(144, 144, 144))))
+            .addGroup(jKananLayout.createSequentialGroup()
+                .addComponent(jSeparator2)
+                .addContainerGap())
         );
         jKananLayout.setVerticalGroup(
             jKananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jKananLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel24)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -577,8 +586,8 @@ public class tugas3 extends javax.swing.JFrame {
                         .addGap(45, 45, 45)
                         .addComponent(jLabel11)
                         .addGap(51, 51, 51)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel22)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -589,9 +598,9 @@ public class tugas3 extends javax.swing.JFrame {
                             .addComponent(jLabel26)
                             .addComponent(jLabel30))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel27)
-                            .addComponent(jLabel31)))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel31)
+                            .addComponent(jLabel27)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addComponent(jLabel21)))
@@ -659,6 +668,11 @@ public class tugas3 extends javax.swing.JFrame {
         jMenuBar1.add(jMenu4);
 
         jMenu2.setText("Keluar");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
         jMenu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu2ActionPerformed(evt);
@@ -737,6 +751,11 @@ public class tugas3 extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenu2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -838,6 +857,7 @@ public class tugas3 extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel jTengah;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;

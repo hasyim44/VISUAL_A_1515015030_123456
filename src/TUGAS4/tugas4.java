@@ -450,7 +450,24 @@ public class tugas4 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        double express = 0, Harga = 0,reguler = 0, total_harga=0;
+        String nm,nt,jm = null;
+        float a;
+        double b = 0;
+        int c;
+        
+        nm = Tnama.getText();
+        nt = Tno.getText();
+        a = Float.parseFloat(Tberat.getText());
+        c = jSlider1.getValue();
+        if(jRadioButton1.isSelected()==true){
+            jm = "Reguler";
+            b = (11500*a)-((11500*a*c)/100);
+        }
+        else if(jRadioButton2.isSelected()==true){
+            jm="Express";
+            b = ((11500*1.5)*a)-((11500*1.5)*a*c/100);
+        }
+        
         if(Tnama.getText().equals("")){
                    
         }else if(Tno.getText().equals("")){
@@ -459,17 +476,10 @@ public class tugas4 extends javax.swing.JFrame {
             
         }else if(!jRadioButton1.isSelected() && !jRadioButton2.isSelected()){
             
-        }else{
-          Harga = jSlider1.getValue()/100;
-          if(jRadioButton1.isSelected()){
-              reguler = Integer.parseInt(Tberat.getText())*11500;  
-              total_harga = reguler - (Harga*reguler);
-          }else{
-              express = (11500*1.5)*Integer.parseInt(Tberat.getText());
-              total_harga = express - (Harga*express);
-          }
-          Ttotal.setText(String.valueOf(total_harga));
-        } 
+        }
+          
+          Ttotal.setText(String.valueOf(+b));
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered

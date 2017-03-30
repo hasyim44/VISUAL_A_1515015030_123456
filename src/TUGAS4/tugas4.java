@@ -450,22 +450,22 @@ public class tugas4 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String nm,nt,jm = null;
+        String na,no,h = null;
+        double Total = 0;
         float a;
-        double b = 0;
-        int c;
+        int b;
         
-        nm = Tnama.getText();
-        nt = Tno.getText();
+        na = Tnama.getText();
+        no = Tno.getText();
         a = Float.parseFloat(Tberat.getText());
-        c = jSlider1.getValue();
+        b = jSlider1.getValue();
         if(jRadioButton1.isSelected()==true){
-            jm = "Reguler";
-            b = (11500*a)-((11500*a*c)/100);
+            h = "Reguler";
+            Total = (11500*a)-((11500*a*b)/100);
         }
         else if(jRadioButton2.isSelected()==true){
-            jm="Express";
-            b = ((11500*1.5)*a)-((11500*1.5)*a*c/100);
+            h = "Express";
+            Total = ((11500*1.5)*a)-((11500*1.5)*a*b/100);
         }
         
         if(Tnama.getText().equals("")){
@@ -478,7 +478,7 @@ public class tugas4 extends javax.swing.JFrame {
             
         }
           
-          Ttotal.setText(String.valueOf(+b));
+          Ttotal.setText(String.valueOf(+Total));
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

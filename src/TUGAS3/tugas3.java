@@ -242,9 +242,7 @@ public class tugas3 extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jKananLayout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addGap(144, 144, 144))))
-            .addGroup(jKananLayout.createSequentialGroup()
-                .addComponent(jSeparator2)
-                .addContainerGap())
+            .addComponent(jSeparator2)
         );
         jKananLayout.setVerticalGroup(
             jKananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
